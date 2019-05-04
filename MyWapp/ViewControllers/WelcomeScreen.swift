@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class WelcomeScreen: UIViewController {
 
     
     @IBOutlet weak var logInUser: UIButton!

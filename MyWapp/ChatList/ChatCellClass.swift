@@ -23,6 +23,7 @@ class ChatCellClass: UITableViewCell{
        
         
     }
+    var populated : Bool = false
   
     
     

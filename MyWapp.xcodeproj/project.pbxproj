@@ -15,7 +15,6 @@
 		4E2208672240205700FD900D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2208662240205700FD900D /* Register.swift */; };
 		4E22086A224022A900FD900D /* LogIn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E220869224022A900FD900D /* LogIn.jpg */; };
 		4E22086C2240271200FD900D /* Register.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E22086B2240271200FD900D /* Register.jpg */; };
-		4E82FDF62275B93100B7393F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */; };
 		4EA17088223FF79800DE8EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA17087223FF79800DE8EA5 /* AppDelegate.swift */; };
 		4EA1708A223FF79800DE8EA5 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */; };
 		4EA1708D223FF79800DE8EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1708B223FF79800DE8EA5 /* Main.storyboard */; };
@@ -26,6 +25,7 @@
 		4EDAAC3F2243C9D7000D288A /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAAC3E2243C9D7000D288A /* ChatList.swift */; };
 		4EDAAC452243CD9C000D288A /* ChatCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAAC442243CD9C000D288A /* ChatCellClass.swift */; };
 		4EDAAC472243CEE6000D288A /* UserDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDAAC462243CEE6000D288A /* UserDefault.png */; };
+		4EE34037227DE9D000704F29 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EE34035227DE9D000704F29 /* DataModel.xcdatamodeld */; };
 		647CEA5B87CC7815F37DB1AB /* Pods_MyWappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CBDCD962E82484A80C0B81 /* Pods_MyWappTests.framework */; };
 		ECF024A42246575500CFAA7B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF024A32246575500CFAA7B /* MessageCell.swift */; };
 		ECF024A622465C5800CFAA7B /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF024A522465C5800CFAA7B /* CustomMessageCell.xib */; };
@@ -66,7 +66,6 @@
 		4E2208662240205700FD900D /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		4E220869224022A900FD900D /* LogIn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LogIn.jpg; sourceTree = "<group>"; };
 		4E22086B2240271200FD900D /* Register.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Register.jpg; sourceTree = "<group>"; };
-		4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4EA17084223FF79800DE8EA5 /* MyWapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA17087223FF79800DE8EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		4EDAAC3E2243C9D7000D288A /* ChatList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
 		4EDAAC442243CD9C000D288A /* ChatCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellClass.swift; sourceTree = "<group>"; };
 		4EDAAC462243CEE6000D288A /* UserDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserDefault.png; sourceTree = "<group>"; };
+		4EE34036227DE9D000704F29 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		70CBDCD962E82484A80C0B81 /* Pods_MyWappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1AF35FC8E93EE4748E9EEF7 /* Pods-MyWapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWapp.debug.xcconfig"; path = "Target Support Files/Pods-MyWapp/Pods-MyWapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF024A32246575500CFAA7B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		4E82FDF82275B98200B7393F /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */,
+				4EE34035227DE9D000704F29 /* DataModel.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -197,11 +197,7 @@
 				4E22086022401C8A00FD900D /* GoogleService-Info.plist */,
 				4E82FDF72275B94B00B7393F /* View */,
 				4E82FDF82275B98200B7393F /* DataModel */,
-				4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */,
-				4E2208642240200100FD900D /* LogIn.swift */,
-				4E2208662240205700FD900D /* Register.swift */,
-				4EDAAC3E2243C9D7000D288A /* ChatList.swift */,
-				ECF024A92246676400CFAA7B /* Texting.swift */,
+				4EE34038227DE9F100704F29 /* ViewControllers */,
 				4E386A72224C1C5700FC1DC8 /* Chat */,
 				4E386A71224C1C2700FC1DC8 /* ChatList */,
 				4EA1708E223FF79B00DE8EA5 /* Assets.xcassets */,
@@ -227,6 +223,18 @@
 				4EA170A9223FF79C00DE8EA5 /* Info.plist */,
 			);
 			path = MyWappUITests;
+			sourceTree = "<group>";
+		};
+		4EE34038227DE9F100704F29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */,
+				4E2208642240200100FD900D /* LogIn.swift */,
+				4E2208662240205700FD900D /* Register.swift */,
+				4EDAAC3E2243C9D7000D288A /* ChatList.swift */,
+				ECF024A92246676400CFAA7B /* Texting.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5528D599F1DEA431C6559F97 /* Frameworks */ = {
@@ -507,7 +515,7 @@
 				ECF024AA2246676400CFAA7B /* Texting.swift in Sources */,
 				4EDAAC452243CD9C000D288A /* ChatCellClass.swift in Sources */,
 				4E2208652240200100FD900D /* LogIn.swift in Sources */,
-				4E82FDF62275B93100B7393F /* DataModel.xcdatamodeld in Sources */,
+				4EE34037227DE9D000704F29 /* DataModel.xcdatamodeld in Sources */,
 				4E2208672240205700FD900D /* Register.swift in Sources */,
 				ECF024A42246575500CFAA7B /* MessageCell.swift in Sources */,
 			);
@@ -848,12 +856,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */ = {
+		4EE34035227DE9D000704F29 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */,
+				4EE34036227DE9D000704F29 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */;
+			currentVersion = 4EE34036227DE9D000704F29 /* DataModel.xcdatamodel */;
 			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
