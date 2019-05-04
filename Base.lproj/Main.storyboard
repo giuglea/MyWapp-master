@@ -149,7 +149,7 @@
                         <outlet property="userConfirmPassword" destination="AMm-xO-dbg" id="BUh-5u-2QS"/>
                         <outlet property="userEmail" destination="LzP-X0-lgo" id="6MY-ex-QPt"/>
                         <outlet property="userPassword" destination="BZa-My-Nac" id="iPz-It-KHR"/>
-                        <segue destination="jj5-to-vg2" kind="show" identifier="GoToChat" id="ftc-sr-mJl"/>
+                        <segue destination="jj5-to-vg2" kind="show" identifier="RegisterToChat" id="ftc-sr-mJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5q-mp-mne" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,6 +245,7 @@
                         <outlet property="logInUser" destination="SBC-th-ZHv" id="7E4-Nu-gf8"/>
                         <outlet property="userEmail" destination="kAt-c7-sUv" id="KCi-sg-okP"/>
                         <outlet property="userPassword" destination="fCb-aG-vv2" id="hWH-dv-RLr"/>
+                        <segue destination="jj5-to-vg2" kind="show" identifier="LogToChat" id="8fh-km-sXg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKF-hK-eld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ROk-2l-UWs">
-                                <rect key="frame" x="0.0" y="211" width="414" height="529"/>
+                                <rect key="frame" x="0.0" y="155" width="414" height="658"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -299,20 +300,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuf-gu-hBn">
+                                <rect key="frame" x="309" y="100" width="96" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="New Chat">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="newChat:" destination="jj5-to-vg2" eventType="touchUpInside" id="yLd-fu-UwP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q4K-J6-14d"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="kJd-pM-1uL">
-                            <connections>
-                                <action selector="newChat:" destination="jj5-to-vg2" id="cCv-TW-hoI"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chatTableList" destination="ROk-2l-UWs" id="DAc-bm-rP4"/>
+                        <outlet property="newChatCorner" destination="yuf-gu-hBn" id="ve8-84-gKj"/>
                         <segue destination="fkB-l8-O3m" kind="show" identifier="GoToTexting" id="7Ys-X9-VIU"/>
                     </connections>
                 </viewController>
@@ -350,4 +357,7 @@
         <image name="LogIn.jpg" width="1125" height="2436"/>
         <image name="Register.jpg" width="1125" height="2436"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ftc-sr-mJl"/>
+    </inferredMetricsTieBreakers>
 </document>

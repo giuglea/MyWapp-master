@@ -10,24 +10,14 @@ import Foundation
 import UIKit
 import CoreData
 
-class ChatList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate{
+class ChatList: UIViewController,UIGestureRecognizerDelegate{
     
-    var numberOfChats = [Int]()
-    var chats = [String]()
-    let context = (UIApplication.shared.delegate as! AppDelegate)
+    
+    var chatArray = [ChatListData]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var chatTableList: UITableView!
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfChats.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = chatTableList.dequeueReusableCell(withIdentifier: "ChatCellClass", for: indexPath) as! ChatCellClass
-        return cell
-    }
+    @IBOutlet weak var newChatCorner: UIButton!
     
    
     
@@ -42,6 +32,78 @@ class ChatList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGes
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
         chatTableList.addGestureRecognizer(tapGesture)
+        //loadChatList()
+        
+        newChatCorner.layer.cornerRadius = 20
+        
+    }
+    
+    
+    func loadChatList(){
+        
+        let request : NSFetchRequest<ChatListData> = try ChatListData.fetchRequest()
+        
+        do{
+            chatArray = try context.fetch(request)
+        }catch{
+            print("Fetch request error : \(error)")
+        }
+        
+        chatTableList.reloadData()
+        
+    }
+    
+    
+    
+    @IBAction func newChat(_ sender: Any) {
+        var textField = UITextField()
+        let alert =   UIAlertController.init(title: "New Chat with:", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add New Chat", style: .default) { (action) in
+            let newChat = ChatListData(context: self.context)
+            newChat.chatName = textField.text!
+            self.chatArray.append(newChat)
+            self.saveChat()
+            
+        }
+        alert.addAction(action)
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new Chat"
+            textField = alertTextField
+        }
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func saveChat(){
+        
+        do{
+            try context.save()
+        }catch{
+            print("Error saving context \(error)")
+        }
+        chatTableList.reloadData()
+    }
+    
+    
+}
+
+
+
+
+
+extension ChatList : UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chatArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = chatTableList.dequeueReusableCell(withIdentifier: "ChatCellClass", for: indexPath) as! ChatCellClass
+        cell.userName.text = chatArray[indexPath.row].chatName
+        return cell
     }
     
     @objc func tableViewTapped(_ sender: Any){
@@ -49,19 +111,6 @@ class ChatList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGes
         
         performSegue(withIdentifier: "GoToTexting", sender: self)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
-    
-    @IBAction func newChat(_ sender: Any) {
-      let alert =   UIAlertController.init(title: "New Chat with:", message: "", preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Add New Chat", style: .default) { (action) in
-            //let newChat = 
-        }
-    }
-    
     
     
 }

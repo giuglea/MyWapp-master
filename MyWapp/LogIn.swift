@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Firebase
 
 class LogIn: UIViewController{
     
@@ -30,6 +30,11 @@ class LogIn: UIViewController{
     //TODO: email verification
     
     @IBAction func logInProcess(_ sender: Any) {
-        
+        Auth.auth().signIn(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
+            if error != nil{
+                print("Log in succesful!!")
+                self.performSegue(withIdentifier: "LogToChat", sender: self)
+            }
+        }
     }
 }

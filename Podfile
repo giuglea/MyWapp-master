@@ -6,8 +6,10 @@ target 'MyWapp' do
   use_frameworks!
 
   # Pods for MyWapp
-    pod 'Firebase'
-    pod 'SVProgressHUD'
+   pod 'Firebase'
+   pod 'SVProgressHUD'
+   pod 'Firebase/Auth'
+	
 
   target 'MyWappTests' do
     inherit! :search_paths

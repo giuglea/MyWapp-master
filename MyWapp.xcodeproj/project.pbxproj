@@ -15,6 +15,7 @@
 		4E2208672240205700FD900D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2208662240205700FD900D /* Register.swift */; };
 		4E22086A224022A900FD900D /* LogIn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E220869224022A900FD900D /* LogIn.jpg */; };
 		4E22086C2240271200FD900D /* Register.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E22086B2240271200FD900D /* Register.jpg */; };
+		4E82FDF62275B93100B7393F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */; };
 		4EA17088223FF79800DE8EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA17087223FF79800DE8EA5 /* AppDelegate.swift */; };
 		4EA1708A223FF79800DE8EA5 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */; };
 		4EA1708D223FF79800DE8EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1708B223FF79800DE8EA5 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		4E2208662240205700FD900D /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		4E220869224022A900FD900D /* LogIn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LogIn.jpg; sourceTree = "<group>"; };
 		4E22086B2240271200FD900D /* Register.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Register.jpg; sourceTree = "<group>"; };
+		4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		4EA17084223FF79800DE8EA5 /* MyWapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA17087223FF79800DE8EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
@@ -147,6 +149,24 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		4E82FDF72275B94B00B7393F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EA1708B223FF79800DE8EA5 /* Main.storyboard */,
+				4EA17090223FF79B00DE8EA5 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4E82FDF82275B98200B7393F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		4EA1707B223FF79800DE8EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +192,11 @@
 		4EA17086223FF79800DE8EA5 /* MyWapp */ = {
 			isa = PBXGroup;
 			children = (
+				4EA17087223FF79800DE8EA5 /* AppDelegate.swift */,
 				4E22084F224002C200FD900D /* MyWapp.entitlements */,
 				4E22086022401C8A00FD900D /* GoogleService-Info.plist */,
-				4EA17090223FF79B00DE8EA5 /* LaunchScreen.storyboard */,
-				4EA1708B223FF79800DE8EA5 /* Main.storyboard */,
-				4EA17087223FF79800DE8EA5 /* AppDelegate.swift */,
+				4E82FDF72275B94B00B7393F /* View */,
+				4E82FDF82275B98200B7393F /* DataModel */,
 				4EA17089223FF79800DE8EA5 /* WelcomeScreen.swift */,
 				4E2208642240200100FD900D /* LogIn.swift */,
 				4E2208662240205700FD900D /* Register.swift */,
@@ -389,6 +409,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MyWapp/Pods-MyWapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -397,6 +418,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -485,6 +507,7 @@
 				ECF024AA2246676400CFAA7B /* Texting.swift in Sources */,
 				4EDAAC452243CD9C000D288A /* ChatCellClass.swift in Sources */,
 				4E2208652240200100FD900D /* LogIn.swift in Sources */,
+				4E82FDF62275B93100B7393F /* DataModel.xcdatamodeld in Sources */,
 				4E2208672240205700FD900D /* Register.swift in Sources */,
 				ECF024A42246575500CFAA7B /* MessageCell.swift in Sources */,
 			);
@@ -823,6 +846,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E82FDF42275B93100B7393F /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 4E82FDF52275B93100B7393F /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4EA1707C223FF79800DE8EA5 /* Project object */;
 }

@@ -42,11 +42,11 @@ class Register:UIViewController{
 //            }
 //
 //        else{
-//            self.performSegue(withIdentifier: "RegistrationToChat", sender: self)
+//            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
 //                SVProgressHUD.dismiss()
 //        }
 //        }
-        performSegue(withIdentifier: "GoToChat", sender: self)
+        performSegue(withIdentifier: "RegisterToChat", sender: self)
     }
     
     
